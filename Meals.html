@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الوجبات - مطعم الوجبات</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>قائمة الوجبات</h1>
+    <p>اختر الوجبات المناسبة ثم تابع الطلب</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="home.html">الرئيسية</a>
+    <a href="AboutUs.html">من نحن</a>
+    <a href="Meals.html" class="active">الوجبات</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>جدول الوجبات</h2>
+      <div class="table-wrap">
+        <table class="meals-table">
+          <thead>
+            <tr>
+              <th>الرمز</th>
+              <th>الوجبة</th>
+              <th>السعر</th>
+              <th>إظهار التفاصيل</th>
+              <th>اختيار</th>
+            </tr>
+          </thead>
+          <tbody id="mealsBody">
+            <tr data-meal-id="SF-001" data-price="110000">
+              <td>SF-001</td>
+              <td>وجبة سمك بوري مشوي لشخصين</td>
+              <td>110000 ل.س</td>
+              <td><input type="checkbox" class="toggle-details" aria-label="إظهار تفاصيل SF-001"></td>
+              <td><input type="checkbox" class="select-meal" aria-label="اختيار SF-001"></td>
+            </tr>
+            <tr class="details-row" id="details-SF-001">
+              <td colspan="5">
+                <strong>المطبخ:</strong> المصري<br>
+                <strong>تصنيف الطعام:</strong> مأكولات بحرية<br>
+                <strong>المكونات:</strong>
+                <ul>
+                  <li>4 سمكات بوري أحمر، مغسول ومنظف.</li>
+                  <li>بضعة أوراق من الأوريجانو الطازج.</li>
+                  <li>1 ملعقة صغيرة ملح.</li>
+                  <li>1 ملعقة صغيرة فلفل أسود مطحون.</li>
+                </ul>
+                <strong>الصلصة:</strong>
+                <ul>
+                  <li>1 ملعقة كبيرة زيت زيتون.</li>
+                  <li>3 فصوص ثوم مفرومة.</li>
+                  <li>حبة فلفل أحمر طازج.</li>
+                  <li>6 حبات طماطم طرية مفرومة.</li>
+                  <li>نصف ليمونة معصورة مع بقدونس.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr data-meal-id="SF-002" data-price="95000">
+              <td>SF-002</td>
+              <td>وجبة سمك فيليه مقلي مع بطاطا</td>
+              <td>95000 ل.س</td>
+              <td><input type="checkbox" class="toggle-details" aria-label="إظهار تفاصيل SF-002"></td>
+              <td><input type="checkbox" class="select-meal" aria-label="اختيار SF-002"></td>
+            </tr>
+            <tr class="details-row" id="details-SF-002">
+              <td colspan="5">
+                <strong>المطبخ:</strong> الشرقي<br>
+                <strong>تصنيف الطعام:</strong> وجبة رئيسية<br>
+                <strong>الوصف:</strong> فيليه سمك ذهبي القرمشة يقدم ساخنًا مع بطاطا وصوص ثوم كريمي.<br>
+                <strong>المكونات:</strong> فيليه سمك، طحين، بهارات، بطاطا مقلية، صوص ثوم.<br>
+                <strong>طريقة التقديم:</strong> يزين بشرائح ليمون وبقدونس طازج.
+              </td>
+            </tr>
+
+            <tr data-meal-id="SF-003" data-price="120000">
+              <td>SF-003</td>
+              <td>وجبة سي فود مشكل لشخصين</td>
+              <td>120000 ل.س</td>
+              <td><input type="checkbox" class="toggle-details" aria-label="إظهار تفاصيل SF-003"></td>
+              <td><input type="checkbox" class="select-meal" aria-label="اختيار SF-003"></td>
+            </tr>
+            <tr class="details-row" id="details-SF-003">
+              <td colspan="5">
+                <strong>المطبخ:</strong> المتوسطي<br>
+                <strong>تصنيف الطعام:</strong> مأكولات بحرية متنوعة<br>
+                <strong>الوصف:</strong> طبق فاخر يجمع أصناف بحرية مشوية ومقلية بتتبيلة متوسطية.<br>
+                <strong>المكونات:</strong> روبيان، كالماري، سمك مشوي، أرز، سلطة خضراء.<br>
+                <strong>مميزات الطبق:</strong> غني بالبروتين ويكفي لشخصين.
+              </td>
+            </tr>
+
+            <tr data-meal-id="SF-004" data-price="85000">
+              <td>SF-004</td>
+              <td>وجبة صيادية السمك</td>
+              <td>85000 ل.س</td>
+              <td><input type="checkbox" class="toggle-details" aria-label="إظهار تفاصيل SF-004"></td>
+              <td><input type="checkbox" class="select-meal" aria-label="اختيار SF-004"></td>
+            </tr>
+            <tr class="details-row" id="details-SF-004">
+              <td colspan="5">
+                <strong>المطبخ:</strong> الشامي<br>
+                <strong>تصنيف الطعام:</strong> أرز مع سمك<br>
+                <strong>الوصف:</strong> وصفة صيادية تقليدية بنكهة البصل المحمر والبهارات الشرقية.<br>
+                <strong>المكونات:</strong> أرز بسمتي، سمك مقطع، بصل، بهارات صيادية، مكسرات.<br>
+                <strong>طريقة التقديم:</strong> يقدم مع سلطة موسمية وصلصة طحينة.
+              </td>
+            </tr>
+
+            <tr data-meal-id="SF-005" data-price="70000">
+              <td>SF-005</td>
+              <td>وجبة ساندويش روبيان</td>
+              <td>70000 ل.س</td>
+              <td><input type="checkbox" class="toggle-details" aria-label="إظهار تفاصيل SF-005"></td>
+              <td><input type="checkbox" class="select-meal" aria-label="اختيار SF-005"></td>
+            </tr>
+            <tr class="details-row" id="details-SF-005">
+              <td colspan="5">
+                <strong>المطبخ:</strong> سريع<br>
+                <strong>تصنيف الطعام:</strong> ساندويش<br>
+                <strong>الوصف:</strong> ساندويش خفيف بطعم بحري واضح وتوازن رائع بين الصوص الحار والمايونيز.<br>
+                <strong>المكونات:</strong> روبيان متبل، خبز عربي، خس، مايونيز، صوص حار.<br>
+                <strong>مناسب لـ:</strong> وجبة سريعة ومشبعة.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button id="continueBtn" class="btn-primary">متابعة</button>
+    </section>
+
+    <section class="card">
+      <h2>صور الأطباق والمأكولات</h2>
+      <div class="gallery-grid">
+        <article class="mini-card">
+          <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=700&auto=format&fit=crop&q=60" alt="طبق SF-001" loading="lazy">
+          <h3>SF-001 - سمك بوري مشوي</h3>
+          <p>يقدم مع صلصة الليمون والأعشاب الطازجة.</p>
+        </article>
+        <article class="mini-card">
+          <img src="https://images.unsplash.com/photo-1579631542720-3a87824fff86?w=700&auto=format&fit=crop&q=60" alt="طبق SF-002" loading="lazy">
+          <h3>SF-002 - فيليه مقلي</h3>
+          <p>فيليه مقرمش مع بطاطا مقلية وصوص الثوم.</p>
+        </article>
+        <article class="mini-card">
+          <img src="https://images.unsplash.com/photo-1625944525903-b2f68c8f7ecf?w=700&auto=format&fit=crop&q=60" alt="طبق SF-003" loading="lazy">
+          <h3>SF-003 - سي فود مشكل</h3>
+          <p>تشكيلة روبيان وكالماري وسمك مشوي.</p>
+        </article>
+        <article class="mini-card">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&auto=format&fit=crop&q=60" alt="مقبلات" loading="lazy">
+          <h3>مقبلات إضافية</h3>
+          <p>سلطات طازجة ومقبلات بحرية خفيفة.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card hidden" id="orderFormSection">
+      <h2>نموذج الطلب</h2>
+      <form id="orderForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">الاسم الكامل (أحرف عربية فقط)</label>
+          <input type="text" id="fullName" name="fullName" placeholder="مثال: محمد أحمد علي">
+          <small class="error-message" id="fullNameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="nationalId">الرقم الوطني (إلزامي)</label>
+          <input type="text" id="nationalId" name="nationalId" maxlength="11" placeholder="01XXXXXXXXX" required>
+          <small class="error-message" id="nationalIdError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="birthDate">تاريخ الولادة</label>
+          <input type="date" id="birthDate" name="birthDate">
+          <small class="error-message" id="birthDateError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">رقم الموبايل (Syriatel / MTN)</label>
+          <input type="text" id="mobile" name="mobile" placeholder="09XXXXXXXX">
+          <small class="error-message" id="mobileError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">الإيميل</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com">
+          <small class="error-message" id="emailError"></small>
+        </div>
+
+        <button type="submit" class="btn-primary">إرسال</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="myFunctions.js"></script>
+</body>
+</html>
